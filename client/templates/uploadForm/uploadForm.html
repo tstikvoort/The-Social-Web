@@ -1,0 +1,35 @@
+<template name="uploadForm">
+	<article class="uploadForm">
+		<h2 class="pageTitle">Upload een gitaar</h2>
+		<form>
+			<input type="file" multiple="multiple" name="fileUpload">
+			<section>
+				<label>
+					<span>Brand:</span>
+					<input type="text" name="brand" id="brand" placeholder="e.g. Gibson, Fender" required>
+				</label>
+				<label>
+					<span>Model:</span>
+					<input type="text" name="model" id="model" placeholder="e.g. Les Paul, Telecaster" required>
+				</label>
+				<label>
+					<span>Year:</span>
+					<input type="text" name="year" id="year" placeholder="yyyy" required>
+				</label>
+				<label>
+					<span>Finish:</span>
+					<input type="text" name="finish" id="finish" placeholder="e.g. sunburst, black" required>
+				</label>
+				<label>
+					<span>Made in:</span>
+					<input type="text" name="origin" id="origin" placeholder="e.g. USA, Mexico" required>
+				</label>
+				<label>
+					<span>Description:</span>
+					<textarea type="text" name="description" id="description" placeholder="Why are you posting this guitar? What makes it special?" required></textarea>
+				</label>
+				<input type="submit" class="submit">
+			</section>
+		</form>
+	</article>
+</template>

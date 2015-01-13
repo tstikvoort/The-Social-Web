@@ -11,3 +11,4 @@ iron:router
 accounts-facebook
 service-configuration
 underscore
+gfk:notifications

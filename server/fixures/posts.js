@@ -13,19 +13,19 @@ if (posts.find().count() === 0) {
             {
                 _id: 'J3tQjxRi84uZ2TvhY',
                 name: 'Dimitri de Wit',
-                img: 'media/dimi.png',
+                img: '/media/dimi.png',
                 message: 'Cool!'
             },
             {
                 _id: 'J3tQjARi84uZ2TvhY',
                 name: 'Sjaak Luthart',
-                img: 'media/sjaak.png',
+                img: '/media/sjaak.png',
                 message: 'Mooi gitaar!'
             },
             {
                 _id: 'J3tQjRRi84uZ2TvhY',
                 name: 'Tobias Stikvoort',
-                img: 'media/tobi.png',
+                img: '/media/tobi.png',
                 message: 'Ziet er zeker goed uit.'
             }
         ],
@@ -50,19 +50,19 @@ if (posts.find().count() === 0) {
             {
                 _id: 'J3tQjxRi84uZ2TvhY',
                 name: 'Dimitri de Wit',
-                img: 'media/dimi.png',
+                img: '/media/dimi.png',
                 message: 'Cool!'
             },
             {
                 _id: 'J3tQjARi84uZ2TvhY',
                 name: 'Sjaak Luthart',
-                img: 'media/sjaak.png',
+                img: '/media/sjaak.png',
                 message: 'Mooi gitaar!'
             },
             {
                 _id: 'J3tQjRRi84uZ2TvhY',
                 name: 'Tobias Stikvoort',
-                img: 'media/tobi.png',
+                img: '/media/tobi.png',
                 message: 'Ziet er zeker goed uit.'
             }
         ],
@@ -93,19 +93,19 @@ if (posts.find().count() === 0) {
             {
                 _id: 'J3tQjxRi84uZ2TvhY',
                 name: 'Dimitri de Wit',
-                img: 'media/dimi.png',
+                img: '/media/dimi.png',
                 message: 'Cool!'
             },
             {
                 _id: 'J3tQjARi84uZ2TvhY',
                 name: 'Sjaak Luthart',
-                img: 'media/sjaak.png',
+                img: '/media/sjaak.png',
                 message: 'Mooi gitaar!'
             },
             {
                 _id: 'J3tQjRRi84uZ2TvhY',
                 name: 'Tobias Stikvoort',
-                img: 'media/tobi.png',
+                img: '/media/tobi.png',
                 message: 'Ziet er zeker goed uit.'
             }
         ],

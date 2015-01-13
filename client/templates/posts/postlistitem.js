@@ -1,3 +1,4 @@
+$('body').addClass('detailPage');
 Template.postListItem.helpers({
 	liked: function() {
 		var post = posts.findOne(this._id);
@@ -25,6 +26,10 @@ Template.postListItem.events({
 	    };
 	    posts.update({_id: $(e.target).find('[id="_id"]').val()}, {$push: {'comments': comment}});
 	    $(e.target).find('[id="comment"]').val('');
+	    Notifications.success('', 'Comment posted!', options = {
+			timeout: 1500,
+			userCloseable: false
+		});
 	},
 	'click #addLike': function(e){
 		var user = Meteor.user();
@@ -39,5 +44,9 @@ Template.postListItem.events({
 		if(likes.indexOf(user._id) < 0) {
 			posts.update({_id: post._id}, {$push: {'likes': newLike}});
 		}
+		Notifications.success('', 'Post liked!', options = {
+			timeout: 1500,
+			userCloseable: false
+		});
 	}
 });

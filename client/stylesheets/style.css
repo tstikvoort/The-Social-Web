@@ -11,28 +11,51 @@ body {
 span.grey {
 	color: #6c757f;
 }
+.pageTitle, .postTitle {
+	padding-left: 20px;
+	font-size: 24px;
+	margin-bottom: 5px;
+}
+.pageTitle a, .postTitle a {
+	text-decoration: none;
+	color: black;
+}
+
 /* header */
+body  {
+	margin-top:80px;
+}
 body > div > header {
 	background: #ff6861;
 	margin-bottom: 20px;
 	text-align: center;
 	color: #fbf4d8;
 	padding: 10px;
-	position: relative;
-}
-body > div > header > h1 {
-	display: inline;
+	position: fixed;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 1;
+	top: 0;
+	height: 60px;
 }
 body > div > header > a {
 	color: #fbf4d8;
 	text-decoration: none;
 }
+body > div > header > a > h1 {
+	display: inline;
+}
 body > div > header > a.menuButton {
 	float: right;
 	position: absolute;
-	top: 20px;
+	top: 18px;
 	right: 20px;
-
+}
+body > div > header > .back {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 24px;
 }
 body > div > header > a > span {
 	display: block;
@@ -45,9 +68,25 @@ body > div > header > a > span {
 body > div > header > a > span:last-child {
 	margin-bottom: 0;
 }
+#login-buttons {
+	margin: 0 auto;
+	width: 163px;
+	display: block;
+}
+/* notifications */ 
+ul.notifications {
+	position: fixed;
+	width: 100%;
+	top: 60px;
+}
+li.notification {
+	width: 100%;
+	margin: 0;
+	padding-left: 10px;
+}
 /* nav */
 nav {
-	position: absolute;
+	position: fixed;
 	right: -50%;
 	top: 0;
 	bottom: 0;
@@ -59,7 +98,7 @@ nav {
 }
 body .overlay {
 	background: black;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	bottom: 0;
 	left:0;
@@ -105,20 +144,11 @@ nav li .avatarContainer {
 nav li .userName {
 	margin-left: 50px;
 }
-/* postList */
+
+/* posts */
 .post {
 	margin-bottom: 20px;
-}
-.post .title {
-	padding-left: 20px;
-	font-size: 24px;
-	margin-bottom: 5px;
-}
-.post .title a {
-	text-decoration: none;
-	color: black;
-}
-.post .imageContainer {
+}.post .imageContainer {
 	width: 100%;
     overflow: hidden;
     position: relative;
@@ -154,13 +184,6 @@ nav li .userName {
 	width: 100px;
 	color: #6c757f;
 }
-/*.post .content dl {
-	margin-bottom: 20px;
-	overflow: hidden;
-}
-.post .buttons {
-	margin-bottom: 20px;
-}*/
 .post .buttons div {
 	width: calc(50% - 10px);
 	border: 2px solid #ff6861;
@@ -238,6 +261,7 @@ nav li .userName {
 .post .commentsBlock input[type="submit"] {
 	display: none;
 }
+
 /* postlist */
 .postList .imageBar {
 	position: absolute;
@@ -263,4 +287,28 @@ nav li .userName {
 	background: url('media/icons/comment.png');
 	background-repeat: no-repeat;
 	background-position-y: 2px;
+}
+
+/* uploadForm */
+.uploadForm {
+
+}
+.uploadForm section {
+	padding: 10px;	
+}
+.uploadForm section label {
+	display: block;
+	margin-bottom: 5px;
+}
+.uploadForm section label span {
+	display: inline-block;
+	width: 50%;
+}
+.uploadForm section label input {
+	width: 48%;
+}
+.uploadForm section label textarea {
+	display: block;
+	width: 100%;
+	min-height: 50px;
 }

@@ -1,5 +1,6 @@
 <template name="header">
 	<header>
+		{{#if detailPage}}<img src="/media/icons/back.png" alt="back" class="back" />{{/if}}
 		<a href="/"><h1>VGV</h1></a>
 		<a href="#" class="menuButton">
             <span class="bar"></span>
@@ -7,6 +8,7 @@
             <span class="bar"></span>
         </a>
 	</header>
+	{{> notifications}}
 	<div class="overlay"></div>
 	<nav class="mainMenu">
 		<ul>
@@ -14,19 +16,19 @@
 				<span class="avatarContainer" style="background-image:url('{{currentUser.profile.picture}}')"></span>
 				<span class="userName">{{ currentUser.profile.name }}</span>
 			</li>
-			<li class="upload">
-				<a href="/upload">Upload een gitaar</a>
+			<li class="upload menuItem">
+				<a href="/upload" class="menuItem">Upload een gitaar</a>
 			</li>
-			<li class="favorites">
+			<li class="favorites menuItem">
 				Mijn favorieten
 			</li>
-			<li class="uploads">
+			<li class="uploads menuItem">
 				Mijn uploads
 			</li>
-			<li class="settings"> 
+			<li class="settings menuItem"> 
 				Mijn instellingen
 			</li>
-			<li class="logout">
+			<li class="logout menuItem">
 				Uitloggen
 			</li>
 		</ul>
