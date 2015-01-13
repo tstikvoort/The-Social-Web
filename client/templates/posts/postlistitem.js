@@ -31,6 +31,12 @@ Template.postListItem.events({
 			userCloseable: false
 		});
 	},
+	'click .commentButton': function(e){
+		console.log('test');
+		var text_input = document.getElementById('comment');
+		text_input.focus ();
+		text_input.select ();
+	},
 	'click #addLike': function(e){
 		var user = Meteor.user();
 		var post = posts.findOne(this._id);
@@ -43,10 +49,11 @@ Template.postListItem.events({
 		});
 		if(likes.indexOf(user._id) < 0) {
 			posts.update({_id: post._id}, {$push: {'likes': newLike}});
+			Notifications.success('', 'Post liked!', options = {
+				timeout: 1500,
+				userCloseable: false
+			});
 		}
-		Notifications.success('', 'Post liked!', options = {
-			timeout: 1500,
-			userCloseable: false
-		});
+		
 	}
 });

@@ -82,7 +82,15 @@ ul.notifications {
 li.notification {
 	width: 100%;
 	margin: 0;
+	margin-left: 10px;
 	padding-left: 10px;
+	border-radius: 0;
+}
+li.notification div.title {
+	margin: 0;
+}
+li.notification div.message {
+	margin-left: 10px;
 }
 /* nav */
 nav {
@@ -194,6 +202,7 @@ nav li .userName {
 	box-sizing: border-box;
 	padding: 10px;
 	transition: all 0.3s linear;
+	cursor: pointer;
 }
 .post .buttons div:nth-child(2n+1) {
 	float: right;
@@ -257,6 +266,7 @@ nav li .userName {
 }
 .post .commentsBlock input {
 	width: 100%;
+	box-sizing: border-box;
 }
 .post .commentsBlock input[type="submit"] {
 	display: none;
