@@ -172,6 +172,9 @@ nav li .userName {
     min-height: 100%;
     width: 100%;
 }
+.post .imageContainer img.active {
+	z-index: 1;
+}
 .post .content {
 	padding:20px;
 	font-size: 20px;
@@ -314,7 +317,7 @@ nav li .userName {
 	display: inline-block;
 	width: 50%;
 }
-.uploadForm section label input {
+.uploadForm section label input,  .uploadForm section label select{
 	width: 48%;
 }
 .uploadForm section label textarea {

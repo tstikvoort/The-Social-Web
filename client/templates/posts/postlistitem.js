@@ -4,11 +4,13 @@ Template.postListItem.helpers({
 		var post = posts.findOne(this._id);
 		var user = Meteor.user();
 		var likes = [];
-		post.likes.forEach(function(like){
-			likes.push(like._id);
-		});
-		if(likes.indexOf(user._id) < 0) {
-			return false;
+		if(post){
+			post.likes.forEach(function(like){
+				likes.push(like._id);
+			});
+			if(likes.indexOf(user._id) < 0) {
+				return false;
+			}
 		}
 		return true;
 	}

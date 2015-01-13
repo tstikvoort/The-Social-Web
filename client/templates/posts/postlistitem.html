@@ -2,7 +2,18 @@
 	<section class="post postItem">
 			<header class="pageTitle">{{brand}} {{model}} - <span class="grey">{{year}}</span></header>
 			<section class="imageContainer">
-				<img src="/media/{{_id}}/{{cover}}" alt="{{cover}}" />
+				<img src="/media/{{_id}}/{{cover}}" alt="{{cover}}" class="active"/>
+				{{#each img}}
+					<img src="/media/{{../_id}}/{{this}}" alt="{{this}}"/>
+				{{/each}}
+				<!-- <section class="controls">
+					<section class="next">
+
+					</section>
+					<section class="">
+
+					</section>
+				</section> -->
 			</section>
 			<section class="content">
 				<section class="description">
