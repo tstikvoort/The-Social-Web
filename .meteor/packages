@@ -7,5 +7,7 @@
 meteor-platform
 sacha:spin
 accounts-ui
-accounts-password
 iron:router
+accounts-facebook
+service-configuration
+underscore

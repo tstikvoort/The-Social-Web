@@ -3,6 +3,10 @@
 		{{> header}}
 	</div>
 	<div id="main" class="">
-		{{> yield}}
+		{{#if currentUser}}
+			{{> yield}}
+		{{else}}
+			{{> loginButtons}}
+		{{/if}}
 	</div>
 </template>

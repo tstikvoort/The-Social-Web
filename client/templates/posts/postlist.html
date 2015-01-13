@@ -1,3 +1,22 @@
 <template name="postList">
-	loop
+	<article class="postList">
+		{{#each posts}}
+			<section class="post">
+				<header class="title"><a href="{{_id}}">{{brand}} {{model}} - <span class="grey">{{year}}</span></a></header>
+				<section class="imageContainer">
+					<a href="{{_id}}">
+						<img src="media/{{_id}}/{{cover}}" alt="{{cover}}" />
+					</a>
+					<div class="imageBar">
+						<div class="likes">
+							{{ likes.length }} Likes
+						</div>
+						<div class="comments">
+							{{ comments.length }} Comments
+						</div>
+					</div>
+				</section>
+			</section>
+		{{/each}}
+	</article>
 </template>

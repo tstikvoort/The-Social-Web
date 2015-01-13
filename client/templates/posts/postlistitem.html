@@ -1,0 +1,72 @@
+<template name="postListItem">
+	<section class="post postItem">
+			<header class="title">{{brand}} {{model}} - <span class="grey">{{year}}</span></header>
+			<section class="imageContainer">
+				<img src="media/{{_id}}/{{cover}}" alt="{{cover}}" />
+			</section>
+			<section class="content">
+				<section class="description">
+					{{description}}
+				</section>
+				<section class="specs">
+					<dl>
+						<dd>
+							Brand:
+						</dd>
+						<dt>
+							{{brand}}
+						</dt>
+						<dd>
+							Model:
+						</dd>
+						<dt>
+							{{model}}
+						</dt>
+						<dd>
+							Year:
+						</dd>
+						<dt>
+							{{year}}
+						</dt>
+						<dd>
+							Finish:
+						</dd>
+						<dt>
+							{{finish}}
+						</dt>
+						<dd>
+							Made in:
+						</dd>
+						<dt>
+							{{origin}}
+						</dt>
+					</dl>
+				</section>
+				<section class="buttons">
+					<div class="likeButton {{#if liked}}liked{{/if}}" id="addLike">
+						<span class="number"> {{likes.length}} </span>
+						<span class="add">+1</span>
+					</div>
+					<div class="commentButton">
+						<span class="number"> {{comments.length}} </span>
+						<span class="add">+1</span>
+					</div>
+				</section>
+				<section class="commentsBlock">
+					<ul>
+						{{#each comments}}
+							<li class="comment">
+								<span class="avatarContainer" style="background-image:url('{{img}}')"></span>
+								<span class="message">{{message}}</span>
+							</li>
+						{{/each}}
+					</ul>
+					<form>
+						<input type="text" id="comment" placeholder="Reageer hier">
+						<input type="hidden" value="{{_id}}" id="_id">
+						<input type="submit">
+					</form>
+				</section>
+			</section>
+		</section>
+</template>
